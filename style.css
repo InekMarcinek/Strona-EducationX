@@ -6,13 +6,18 @@
     box-sizing: border-box;
     border: none;
     list-style: none;
+    text-decoration: none;
 }
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 85px;
+    transition: 0.2s;
 }
 
 header img {
@@ -31,6 +36,18 @@ header nav ul li {
     color: #555;
     cursor: pointer;
     margin: 0 30px;
+    transition: 0.2s;
+}
+
+header nav ul li:nth-child(3) {
+    color: rgb(255, 94, 0);
+}
+header nav ul li:nth-child(3):hover {
+    color: rgb(255, 0, 0);
+}
+header nav ul li:nth-child(1):hover,
+header nav ul li:nth-child(2):hover {
+    color: #000;
 }
 
 main {
@@ -76,9 +93,9 @@ aside .block {
     top: 0;
     right: 0;
     bottom: 0;
+    z-index: -1;
     width: 50vw;
     border-radius: 0px 0px 0px 50px;
-    z-index: -1;
 }
 
 aside .gradient {
@@ -96,7 +113,7 @@ aside .glass {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh; 
+    height: 100vh;
 }
 
 .onas .content {
@@ -138,91 +155,73 @@ aside .glass {
 
 .onas .content .right .gradient {
     position: absolute;
-    left: 80%;
     height: 100%;
     width: 80px;
-    background: #E1A7F9;
     filter: blur(50px);
+}
+
+.onas .content .right .purple .gradient {
+    left: 80%;
+    background: #E1A7F9;
 }
 
 .onas .content .right .blue .gradient {
-    position: absolute;
     left: 20%;
-    height: 100%;
-    width: 80px;
     background: #86D0FB;
-    filter: blur(50px);
 }
 
 .onas .content .right .red .gradient {
-    position: absolute;
     left: 70%;
-    height: 100%;
-    width: 80px;
     background: #ED7899;
-    filter: blur(50px);
+}
+
+.onas .content .right .glass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 160px;
+    width: 140px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.6);
 }
 
 .onas .content .right .purple .glass {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
     left: 80%;
-    height: 160px;
-    width: 140px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.6);
 }
 
 .onas .content .right .blue .glass {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
     left: 20%;
-    height: 160px;
-    width: 140px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.6);
 }
 
 .onas .content .right .red .glass {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
     left: 70%;
-    height: 160px;
-    width: 140px;
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.6);
 }
 
 .onas .content .right img {
-    width: 80px;
+    width: 75px;
 }
 
 .onas .content .line {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     height: 100%;
+    width: 4px;
 }
 
 .onas .content .line .purple {
     height: 10%;
-    background: #DD9BF8;
+    background: #E1A7F9;
 }
 
 .onas .content .line .blue {
     height: 10%;
-    background: #75C9FA;
+    background: #86D0FB;
 }
 
 .onas .content .line .red {
@@ -263,25 +262,22 @@ aside .glass {
     margin-top: 50px;
 }
 
-.team .content .dots .purple {
+.team .content .dots .circle {
     width: 23px;
     height: 23px;
-    background: #E1A7F9;
     border-radius: 50%;
+}
+
+.team .content .dots .purple {
+    background: #E1A7F9;
 }
 
 .team .content .dots .blue {
-    width: 18px;
-    height: 18px;
     background: #86D0FB;
-    border-radius: 50%;
 }
 
 .team .content .dots .red {
-    width: 18px;
-    height: 18px;
     background: #ED7899;
-    border-radius: 50%;
 }
 
 /*********************/
